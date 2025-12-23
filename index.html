@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wachiraya Satira — My Hobbies</title>
+  <!-- override bg for home -->
+  <style> :root{ --bg-url: url("https://i.pinimg.com/736x/0b/a4/c3/0ba4c3b258d250926a51b0bd6bd1109b.jpg"); } </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <!-- custom cursor element created by script.js -->
+    <header>
+      <div class="bar">
+        <div class="brand">
+          <div style="display:flex;align-items:center;gap:10px">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWZ1NjE2aG10bzljeDYxN2ZpZjk1cG5jYTFhYjkwZDc0c3VyaWEycyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2A1K3C1S0LC5CeWACL/giphy.gif" alt="home pixel" width="36" height="36" style="object-fit:cover;border-radius:4px">
+            <div>
+              <div class="logo">Wachiraya Satira</div>
+              <div class="subtle">✨ Creativity • Experience • Growth 🎮</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:12px">
+          <nav class="main" aria-label="Main">
+            <a href="index.html" class="quick-home">Home</a>
+            <a href="drawing.html">Drawing</a>
+            <a href="cooking.html">Cooking</a>
+            <a href="gaming.html">Gaming</a>
+          </nav>
+
+          <div class="controls">
+            <button class="tab-btn" onclick="toggleTheme()" title="Toggle theme">🌓</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container hero-grid">
+      <section class="panel reveal">
+        <h1>Hi — I'm <strong>Wachiraya Satira</strong></h1>
+        <p class="reveal">
+          I like drawing, cooking, and gaming, and I’ve picked up a lot just by doing them over time. This site is a mix of my hobbies and the experience I’ve gained — things I’ve tried, learned, messed up, and slowly got better at. It’s all shared in a fun, simple way with pixel GIFs and small animations.
+        </p>
+
+        <!-- Carousel (Option 2) -->
+        <div class="carousel reveal" aria-label="Hobby carousel">
+          <!-- Drawing card -->
+          <article class="carousel-card">
+            <img class="card-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm9rOHU5ZnZhNWluaWg2d3VvM25kdWlpMzVjdzhzYW8wcmVvNzg1ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l41K3ennc0qmnC2VG/giphy.gif" alt="drawing gif">
+            <h3>Drawing</h3>
+            <p>Sketches, character drawings, and ideas I’ve practiced and improved over time.</p>
+            <div class="card-actions">
+              <a href="drawing.html">Open</a>
+              <a href="#gallery">Gallery</a>
+            </div>
+          </article>
+
+          <!-- Cooking card -->
+          <article class="carousel-card">
+            <img class="card-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDRtenQ4cTF4b2FoN2hnbGs0emJpamp5YXIzOXFtdjc5dzJweDE5MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V73qHl33NJXEXY0OlY/giphy.gif" alt="cooking gif">
+            <h3>Cooking</h3>
+            <p>Simple recipes, cooking attempts, and tips I learned</p>
+            <div class="card-actions">
+              <a href="cooking.html">Open</a>
+              <a href="#recipes">Recipes</a>
+            </div>
+          </article>
+
+          <!-- Gaming card -->
+          <article class="carousel-card">
+            <img class="card-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA3cnVrMTl3eXh3Y2MxMThpaHh6NG45bjNrc2oyb3ZkZXBpM3dwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/0H4LoKfw8f7MwCZFkw/giphy.gif" alt="gaming gif">
+            <h3>Gaming</h3>
+            <p>Games I play, how I practice, and things I’ve learned from playing a lot.</p>
+            <div class="card-actions">
+              <a href="gaming.html">Open</a>
+              <a href="#setup">Setup</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="long">
+          <div class="image reveal" style="margin-top:18px">
+            
+     
+          </div>
+
+          <p class="reveal">
+            Each page goes a bit deeper into what I enjoy and what I’ve learned along the way. Everything’s split into simple sections, with pixel GIFs around the site just to keep it fun.
+          </p>
+
+        </div>
+      </section>
+
+      <aside class="panel alt reveal">
+        <h3>Contact & quick settings</h3>
+        <form>
+          <label style="font-weight:700">Name</label>
+          <input type="text" placeholder="Your name">
+
+          <label style="font-weight:700">Best date</label>
+          <input type="date">
+
+          <label style="font-weight:700">Theme color</label>
+          <input type="color" value="#ffffff">
+
+          <label style="font-weight:700">Interest</label>
+          <div class="range-row">
+            <input id="rangeHome" type="range" min="0" max="10" value="7">
+            <strong id="rangeHomeLabel">7</strong>
+          </div>
+
+          <label style="font-weight:700">Message</label>
+          <textarea rows="4" placeholder="Short message..."></textarea>
+
+          <div style="display:flex; gap:8px; margin-top:8px">
+            <button type="button" onclick="alert('Design only')" class="tab-btn">Send</button>
+            <button type="button" id="toTopSmall" class="tab-btn">Top</button>
+          </div>
+        </form>
+
+        <div style="margin-top:12px">
+          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWZ1NjE2aG10bzljeDYxN2ZpZjk1cG5jYTFhYjkwZDc0c3VyaWEycyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2A1K3C1S0LC5CeWACL/giphy.gif"
+               alt="home pixel" class="sticker-gif">
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-foot">
+      <div class="foot-inner">
+        <div>© 2025 <strong>Wachiraya Satira</strong></div>
+        <div class="socials">
+          <a href="https://www.instagram.com/night_day030" target="_blank" class="social-link">IG</a>
+          <a href="https://www.tiktok.com/night_day030" target="_blank" class="social-link">TT</a>
+          <a href="https://www.youtube.com/Muknightday" target="_blank" class="social-link">YT</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <button class="to-top" id="toTop">↑</button>
+  <script src="script.js"></script>
+  <script>
+    // small UI bindings
+    const r = document.getElementById('rangeHome'), rl = document.getElementById('rangeHomeLabel');
+    if(r){ r.addEventListener('input', ()=> rl.textContent = r.value); }
+    const small = document.getElementById('toTopSmall');
+    if(small) small.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}));
+  </script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Gaming — Wachiraya Satira</title>
+
+  <style>
+    :root{
+      --bg-url: url("https://i.pinimg.com/736x/73/be/12/73be12b05b2180dbf3b6d1fa782717a3.jpg");
+    }
+
+    /* ========= FORCE WIDER LAYOUT ========= */
+    main.hobby-wrap {
+      max-width: 1200px !important;
+      width: 100% !important;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    main.hobby-wrap > article.panel {
+      flex: 4 !important;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+    }
+
+    main.hobby-wrap > aside.sidebar {
+      flex: 1 !important;
+    }
+
+    /* ========= STICKY TABS ========= */
+    .tabs {
+      position: sticky;
+      top: 8px;
+      z-index: 3;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    /* ========= TAB PANELS ========= */
+    .tab-panels {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .tab-panel {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      overflow-y: auto;
+      padding-right: 8px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .tab-panel.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ========= SECTION DIVIDER ========= */
+    .tab-panel h2 {
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .tab-panel h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      opacity: 0.8;
+    }
+
+    /* ========= TABLE ========= */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background: rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    /* ========= GALLERY ========= */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    /* ========= FLOATING ICON ========= */
+    .pixel-accent {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 16px;
+      opacity: 0.7;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <div class="logo">Wachiraya Satira</div>
+        <div class="subtle">Gaming</div>
+      </div>
+
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="gaming.html">Gaming</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hobby-wrap">
+
+    <article class="panel reveal">
+      <h1>Gaming 🎮</h1>
+      <div class="pixel-accent">🕹️</div>
+
+      <div class="tabs">
+        <button class="tab-btn active">What is it?</button>
+        <button class="tab-btn">My Experience</button>
+        <button class="tab-btn">Setup & Routine</button>
+        <button class="tab-btn">Gallery</button>
+        <button class="tab-btn">Tip</button>
+      </div>
+
+      <div class="tab-panels">
+
+        <div class="tab-panel active">
+          <h2>What is gaming?</h2>
+          <p>
+Gaming is a way for me to relax while still staying focused and engaged.
+It’s not just about winning — it’s about problem-solving, teamwork,
+and learning how to react under pressure.
+</p>
+          <p>
+I enjoy games that require strategy and cooperation, especially ones
+where communication and timing really matter.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>My Experience</h2>
+          <p>
+I started gaming casually with mobile and simple PC games, mostly just
+for fun and to pass time. Over the years, I moved toward more competitive
+and strategy-based games.
+</p>
+          <p>
+Playing with friends helped me improve teamwork and communication.
+I’ve learned how to stay calm, adapt to different situations,
+and keep practicing even after losing.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Setup & Routine</h2>
+          <table>
+            <tr><th>Item</th><th>Use</th></tr>
+            <tr><td>Headset</td><td>Clear communication with teammates</td></tr>
+            <tr><td>Mouse / Controller</td><td>Better control and precision</td></tr>
+            <tr><td>Stable internet</td><td>Smooth and reliable gameplay</td></tr>
+          </table>
+
+          <p style="margin-top:12px">
+Before playing seriously, I usually warm up for a few minutes.
+This helps me focus and avoid rushing into matches unprepared.
+</p>
+
+          <ul style="margin-top:8px">
+            <li>5–10 minutes warm-up</li>
+            <li>Stretch hands and wrists</li>
+            <li>Short breaks between matches</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img src="images/13.jpg" alt="gaming 1">
+            <img src="images/14.jpg" alt="gaming 2">
+            <img src="images/15.jpg" alt="gaming 3">
+            <img src="images/16.jpg" alt="gaming 4">
+          </div>
+          <p>
+These are moments from games I enjoy playing.
+Some are competitive matches, others are just fun sessions with friends.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Quick Tip</h2>
+          <div style="padding:14px;background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));border-left:4px solid var(--accent);border-radius:6px">
+            <strong>Tip:</strong> Take short breaks — playing while tired affects performance.
+          </div>
+
+          <p style="margin-top:12px;color:var(--muted)">
+Staying relaxed and focused is more important than playing nonstop.
+</p>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="panel reveal">
+        <h3>Warm-up</h3>
+        <p style="color:var(--muted)">5–10 min aim or puzzle drills</p>
+        <img class="sticker-gif"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXA3cnVrMTl3eXh3Y2MxMThpaHh6NG45bjNrc2oyb3ZkZXBpM3dwNyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/0H4LoKfw8f7MwCZFkw/giphy.gif">
+        <h4>Quick Links</h4>
+        <p><a class="quick-home" href="index.html">← Home</a></p>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>© 2025 <strong>Wachiraya Satira</strong></div>
+      <div class="socials">
+       <a href="https://www.instagram.com/night_day030" target="_blank" class="social-link">IG</a>
+          <a href="https://www.tiktok.com/night_day030" target="_blank" class="social-link">TT</a>
+          <a href="https://www.youtube.com/Muknightday" target="_blank" class="social-link">YT</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button class="to-top" id="toTop">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

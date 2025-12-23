@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Drawing — Wachiraya Satira</title>
+
+  <style>
+    :root{
+      --bg-url: url("https://i.pinimg.com/736x/b1/1d/6b/b11d6b9830d157c67c8b5afc31d98b4b.jpg");
+    }
+
+    /* ========= FORCE WIDER LAYOUT ========= */
+    main.hobby-wrap {
+      max-width: 1200px !important;
+      width: 100% !important;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    main.hobby-wrap > article.panel {
+      flex: 4 !important;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+    }
+
+    main.hobby-wrap > aside.sidebar {
+      flex: 1 !important;
+    }
+
+    /* ========= STICKY TABS ========= */
+    .tabs {
+      position: sticky;
+      top: 8px;
+      z-index: 3;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    /* ========= TAB PANELS ========= */
+    .tab-panels {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .tab-panel {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      overflow-y: auto;
+      padding-right: 8px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .tab-panel.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ========= SECTION DIVIDER ========= */
+    .tab-panel h2 {
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .tab-panel h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      opacity: 0.8;
+    }
+
+    /* ========= TABLE ========= */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background: rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    /* ========= GALLERY ========= */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    /* ========= FLOATING PIXEL ========= */
+    .pixel-accent {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 16px;
+      opacity: 0.7;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <div class="logo">Wachiraya Satira</div>
+        <div class="subtle">Drawing</div>
+      </div>
+
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="gaming.html">Gaming</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hobby-wrap">
+
+    <article class="panel reveal">
+      <h1>Drawing 🎨</h1>
+      <div class="pixel-accent">✏️</div>
+
+      <div class="tabs">
+        <button class="tab-btn active">What is it?</button>
+        <button class="tab-btn">My Experience</button>
+        <button class="tab-btn">Tools & Schedule</button>
+        <button class="tab-btn">Gallery</button>
+        <button class="tab-btn">Tip</button>
+      </div>
+
+      <div class="tab-panels">
+
+        <div class="tab-panel active">
+          <h2>What is drawing?</h2>
+          <p>
+Drawing is a way for me to slow down and really observe things.
+It’s not just about making something look good — it’s about understanding shapes,
+proportions, light, and movement. I usually focus on simple studies like hands,
+faces, everyday objects, and quick character sketches. Over time, drawing has helped
+me notice details I used to ignore.
+</p>
+
+
+          <p>
+Sometimes I draw from references, and sometimes I just sketch from imagination.
+Both are important — references help me learn accuracy, while imagination helps me
+develop my own style.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>My Experience</h2>
+          <p>
+I started drawing seriously about three years ago. At first, I mostly copied
+pictures and anime characters without really understanding what I was doing.
+It was fun, but progress felt slow.
+</p>
+
+
+          <p>
+After practicing more consistently, I began focusing on fundamentals like gesture,
+proportion, and basic shading. I still make mistakes, but I can clearly see
+improvement compared to when I first started. Drawing has taught me patience and
+how to enjoy the learning process instead of rushing the result.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Tools & Schedule</h2>
+          <table>
+            <tr><th>Item</th><th>Use</th></tr>
+            <tr><td>Sketchbook (A4)</td><td>Daily warmups</td></tr>
+            <tr><td>HB / 2B / 4B</td><td>Line & tone</td></tr>
+            <tr><td>Blending stump</td><td>Smooth shading</td></tr>
+          </table>
+          <p style="margin-top:12px">
+I keep my tools simple because it helps me focus on practice instead of equipment.
+Most of my drawings are done with pencils and paper. I usually draw in the evening
+when things are quieter and I can concentrate better.
+</p>
+          <ul style="margin-top:8px">
+            <li>Warm-up: 5–10 minutes of loose sketches</li>
+            <li>Main practice: 20–40 minutes</li>
+            <li>Review: look at what worked and what didn’t</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img src="images/1.jpg">
+            <img src="images/2.jpg">
+            <img src="images/3.jpg">
+            <img src="images/4.jpg">
+            <img src="images/5.jpg">
+            <img src="images/6.jpg">
+            <img src="images/7.jpg">
+            <img src="images/8.jpg">
+          </div>
+          <p>
+These are some of my recent sketches and practice pieces.
+They’re not all finished works — some are studies, experiments,
+or quick ideas. I like keeping them here to track my progress over time.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Quick Tip</h2>
+          <div style="padding:14px;background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));border-left:4px solid var(--accent);border-radius:6px">
+            <strong>Tip:</strong> 2-minute gesture sketches help improve movement and flow.
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="panel reveal">
+        <h3>Mini Tools</h3>
+        <p style="color:var(--muted)">Routine: 10m warm-up & 30m study</p>
+        <img class="sticker-gif"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdm9rOHU5ZnZhNWluaWg2d3VvM25kdWlpMzVjdzhzYW8wcmVvNzg1ciZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l41K3ennc0qmnC2VG/giphy.gif">
+
+          <h4>Quick Links</h4>
+          <p><a class="quick-home" href="index.html">← Home</a></p>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>© 2025 <strong>Wachiraya Satira</strong></div>
+      <div class="socials">
+       <a href="https://www.instagram.com/night_day030" target="_blank" class="social-link">IG</a>
+          <a href="https://www.tiktok.com/night_day030" target="_blank" class="social-link">TT</a>
+          <a href="https://www.youtube.com/Muknightday" target="_blank" class="social-link">YT</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button class="to-top" id="toTop">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

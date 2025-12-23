@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Cooking — Wachiraya Satira</title>
+
+  <style>
+    :root{
+      --bg-url: url("https://i.pinimg.com/736x/2a/d0/99/2ad099d8681ae4c1afd2ec91da0ed422.jpg");
+    }
+
+    /* ========= FORCE WIDER LAYOUT ========= */
+    main.hobby-wrap {
+      max-width: 1200px !important;
+      width: 100% !important;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    main.hobby-wrap > article.panel {
+      flex: 4 !important;
+      min-height: 580px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow:
+        0 8px 24px rgba(0,0,0,0.08),
+        inset 0 0 0 1px rgba(255,255,255,0.35);
+    }
+
+    main.hobby-wrap > aside.sidebar {
+      flex: 1 !important;
+    }
+
+    /* ========= STICKY TABS ========= */
+    .tabs {
+      position: sticky;
+      top: 8px;
+      z-index: 3;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    /* ========= TAB PANELS ========= */
+    .tab-panels {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .tab-panel {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      overflow-y: auto;
+      padding-right: 8px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .tab-panel.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ========= SECTION DIVIDER ========= */
+    .tab-panel h2 {
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .tab-panel h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 2px;
+      opacity: 0.8;
+    }
+
+    /* ========= TABLE ========= */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background: rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    /* ========= GALLERY ========= */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: translateY(-4px) scale(1.04);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    /* ========= FLOATING ICON ========= */
+    .pixel-accent {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      font-size: 16px;
+      opacity: 0.7;
+      animation: floaty 3s ease-in-out infinite;
+    }
+
+    @keyframes floaty {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <div class="logo">Wachiraya Satira</div>
+        <div class="subtle">Cooking</div>
+      </div>
+
+      <nav class="main">
+        <a href="index.html">Home</a>
+        <a href="drawing.html">Drawing</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="gaming.html">Gaming</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hobby-wrap">
+
+    <article class="panel reveal">
+      <h1>Cooking 🍳</h1>
+      <div class="pixel-accent">🥘</div>
+
+      <div class="tabs">
+        <button class="tab-btn active">What is it?</button>
+        <button class="tab-btn">My Experience</button>
+        <button class="tab-btn">Tools & Schedule</button>
+        <button class="tab-btn">Gallery</button>
+        <button class="tab-btn">Tip</button>
+      </div>
+
+      <div class="tab-panels">
+
+        <div class="tab-panel active">
+          <h2>What is cooking?</h2>
+          <p>
+Cooking is more than just making food — it’s about understanding ingredients,
+timing, and balance. For me, cooking is a way to relax and be creative while still
+doing something practical. I enjoy experimenting with simple recipes and adjusting
+flavors to suit my own taste.
+</p>
+          <p>
+Sometimes I follow recipes closely, and other times I cook based on feeling and
+experience. Both approaches help me learn and improve over time.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>My Experience</h2>
+          <p>
+I started cooking regularly a few years ago, mostly by helping at home and trying
+easy dishes on my own. At first, I made a lot of mistakes — overcooking, under-seasoning,
+and bad timing.
+</p>
+          <p>
+Over time, I became more confident in the kitchen. I learned how to prep ingredients,
+manage heat, and taste food properly. Cooking taught me patience and problem-solving,
+especially when things don’t go exactly as planned.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Tools & Schedule</h2>
+          <table>
+            <tr><th>Item</th><th>Use</th></tr>
+            <tr><td>Chef’s knife</td><td>Preparation & chopping</td></tr>
+            <tr><td>Non-stick pan</td><td>Everyday cooking</td></tr>
+            <tr><td>Measuring spoons</td><td>Balancing flavors</td></tr>
+          </table>
+
+          <p style="margin-top:12px">
+I don’t use many tools — just the basics. I usually cook in the late afternoon or
+evening, especially when I have more time to focus and enjoy the process.
+</p>
+
+          <ul style="margin-top:8px">
+            <li>Prep ingredients before cooking</li>
+            <li>Cook slowly and taste often</li>
+            <li>Clean as you go</li>
+          </ul>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Gallery</h2>
+          <div class="gallery-grid">
+            <img src="images/9.jpg" alt="cooking 1">
+            <img src="images/10.jpg" alt="cooking 2">
+            <img src="images/11.jpg" alt="cooking 3">
+            <img src="images/12.jpg" alt="cooking 4">
+          </div>
+          <p>
+These are some meals I’ve cooked and practiced with.
+They’re simple dishes, but each one helped me learn something new.
+</p>
+        </div>
+
+        <div class="tab-panel">
+          <h2>Quick Tip</h2>
+          <div style="padding:14px;background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85));border-left:4px solid var(--accent);border-radius:6px">
+            <strong>Tip:</strong> Taste your food as you cook — small adjustments make a big difference.
+          </div>
+
+          <p style="margin-top:12px;color:var(--muted)">
+Cooking is a skill that improves with practice. Don’t stress about mistakes —
+they’re part of learning.
+</p>
+        </div>
+
+      </div>
+    </article>
+
+    <aside class="sidebar">
+      <div class="panel reveal">
+        <h3>Mini Recipes</h3>
+        <p style="color:var(--muted)">Quick & simple ideas</p>
+        <img class="sticker-gif"
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDRtenQ4cTF4b2FoN2hnbGs0emJpamp5YXIzOXFtdjc5dzJweDE5MyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/V73qHl33NJXEXY0OlY/giphy.gif">
+        <h4>Quick Links</h4>
+        <p><a class="quick-home" href="index.html">← Home</a></p>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="foot-inner">
+      <div>© 2025 <strong>Wachiraya Satira</strong></div>
+      <div class="socials">
+       <a href="https://www.instagram.com/night_day030" target="_blank" class="social-link">IG</a>
+          <a href="https://www.tiktok.com/night_day030" target="_blank" class="social-link">TT</a>
+          <a href="https://www.youtube.com/Muknightday" target="_blank" class="social-link">YT</a>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<button class="to-top" id="toTop">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
